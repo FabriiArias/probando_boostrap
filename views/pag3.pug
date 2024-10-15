@@ -1,0 +1,105 @@
+//- ORDENAR LAS FECHAS EN DESC
+                //- segun la fecha, ver la matricula del medico que lo atendio
+                //- si esa matricula es igual a la del medico que se logueo se muestra esta estructura.
+                //- si no se debe mostrar la otra estructura que hicimos en excalidraw
+
+extends layout/layout
+
+block head 
+    link(rel="stylesheet", href="/styles/pag3.css")
+
+block content 
+    
+    
+    .text-center.cont-todo.mt-5
+        .row 
+            .col 
+                .card
+                    .conteiner-motivo.d-flex.justify-content-center.gap-5.align-items-center.mt-3.cont-todo
+                        .fecha.d-flex
+                            h3.card-title Paciente: Juan Perez
+                        .fecha.d-flex.gap-3.align-items-center.text-center
+                            div Atenciones: 
+                            select.bg-primary-subtle
+                                option 01/10/24
+                                option 25/10/24
+                                option 10/11/24
+                                option 01/12/24
+                        .medico.text-center.d-flex.align-items-center 
+                            div Doc: Alan Alvarez
+                    .card-body.cont-todo
+                        //- EL MOTIVO siempre va a estar disable, no es un elemento que podamos modificar en nuestra db, viene de la otra  
+                        h4.card-title Motivo 
+                    p.card-text.mb-3 
+                        | Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates sint eveniet ducimus praesentium mollitia, 
+                        | repellat non facere, deleniti incidunt eum ex corporis veritatis voluptate atque, unde et reprehenderit. Consectetur, ipsa.
+    .conteiner.text-center.cont-todo.mt-5
+        .row
+            .col
+                h5.card-title.mb-2 Diagnostico 
+                .card
+                    .card-body.largo 
+                        
+                        p.card-text Estado: confirmado 
+                        p.card-text Detalles: 
+                        | puchitoooooooo
+
+            .col
+                h5.card-title.mb-2 Evolucion 
+                .card
+                    .card-body.largo 
+                        
+                        p.card-text Detalles: 
+                        | Fumo mas que antes :C
+
+            .col
+                h5.card-title.mb-2 Medicamentos 
+                .card 
+                    .card-body.largo
+                        
+                        p.card-text Nicotinel
+                        p.card-text Chicles
+                        p.card-text Pipas
+
+        .row.mt-5 
+            .col
+                h5.card-title.mb-2 Antecedentes 
+                .card 
+                    .card-body.largo
+                        
+                        p.card-text Detalles: 
+                            | no se
+                    .card-text.d-flex.justify-content-between.p-2
+                        p Desde 1/1/1 
+                        p Hasta 11/10/24
+            .col
+                h5.card-title.mb-2 Habitos 
+                .card 
+                    .card-body.largo 
+                        
+                        p.card-text Detalles: 
+                            | y fumar pa
+                    .card-text.d-flex.justify-content-between.p-2
+                        p Desde 1/1/1 
+                        p Hasta 11/10/24
+
+            .col
+                h5.card-title.mb-2 Alergia 
+                .card 
+                    .card-body.largo 
+                        
+                        p.card-text Nombre: tabaco
+                        p.card-text Detalles: 
+                            | fumo y le tengo alergia, maginate
+                    .card-text.d-flex.justify-content-between.p-2
+                        p Desde 1/1/1 
+                        p Hasta 11/10/24
+
+    .text-center.mt-3.mb-5
+        //- Solo lo manda si esta en el turno/fecha del dia de hoy... hacer if
+        a(href="/pag4crear" target="_blank").btn.btn-primary Nuevo
+
+
+
+block footer 
+    include layout/footer
